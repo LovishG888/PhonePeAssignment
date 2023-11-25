@@ -19,6 +19,7 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
             viewModel.places = []
             viewModel.currentPage = 0
             viewModel.getVenuesList(range: Int(distanceSlider.value), searchQuery: searchText)
+            
         }
     }
     
@@ -27,6 +28,7 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.retrieveCachedVenues()
         setup()
         // Do any additional setup after loading the view.
     }
@@ -55,13 +57,18 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
     }
     
     
-    func showNearbyPlaces(places: [Venue]) {
+    func showNearbyPlaces(places: [Venue], isCachedData: Bool) {
+        // clear cached data from places array when getting data from network call
+        if !isCachedData && viewModel.currentPage == 1 {
+            viewModel.places = []
+        }
         // append new places in existing list and reload the view
         viewModel.places.append(contentsOf: places)
         DispatchQueue.main.async {
             self.stopLoader(loader: self.loader ?? UIAlertController())
             self.tableView.reloadData()
         }
+        viewModel.saveVenuesToCache()
     }
 
 }
@@ -84,9 +91,9 @@ extension VenuesViewController: UITableViewDelegate, UITableViewDataSource {
         return 140.0
     }
     
-    // for pagination -> when user has scrolled to second last place, search for new places
+    // for pagination -> when user has scrolled to third last place, search for new places
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == (viewModel.places.count ?? 0) - 2 {
+        if indexPath.row == (viewModel.places.count ?? 0) - 3 {
         
             viewModel.getVenuesList(range: Int(distanceSlider.value), searchQuery: searchText)
             

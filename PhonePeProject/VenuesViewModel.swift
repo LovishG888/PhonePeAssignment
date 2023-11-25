@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetPlacesProtocolDelegate {
-    func showNearbyPlaces(places: [Venue])
+    func showNearbyPlaces(places: [Venue], isCachedData: Bool)
 }
 
 class VenuesViewModel {
@@ -38,11 +38,33 @@ class VenuesViewModel {
             do {
                 let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 let responseModel = try JSONDecoder().decode(VenuesResponse.self, from: data)
-                self.delegate?.showNearbyPlaces(places: responseModel.venues)
+                self.delegate?.showNearbyPlaces(places: responseModel.venues, isCachedData: false)
             }catch {
                 print("error")
             }
         }.resume()
+    }
+    
+    func saveVenuesToCache() {
+        do {
+            let encodedData = try JSONEncoder().encode(places)
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(encodedData, forKey: "venues")
+        } catch {
+            print(error)
+        }
+    }
+    
+    func retrieveCachedVenues() {
+        let userDefaults = UserDefaults.standard
+        if let savedData = userDefaults.object(forKey: "venues") as? Data {
+            do{
+                let savedVenues = try JSONDecoder().decode([Venue].self, from: savedData)
+                self.delegate?.showNearbyPlaces(places: savedVenues, isCachedData: true)
+            } catch {
+                print(error)
+            }
+        }
     }
     
 }
