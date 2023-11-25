@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Venues View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VenuesViewController" customModule="PhonePeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="spe-Xc-muk">
+                                <rect key="frame" x="0.0" y="171" width="393" height="561"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DTx-Qd-Wso">
+                                <rect key="frame" x="16" y="91" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1UX-L3-Qkz"/>
+                                </connections>
+                            </searchBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jB2-fo-Geh">
+                                <rect key="frame" x="30" y="764" width="349" height="31"/>
+                                <connections>
+                                    <action selector="onDistanceValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="fdP-yi-mbp"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DTx-Qd-Wso" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1nJ-9h-Ngh"/>
+                            <constraint firstItem="jB2-fo-Geh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="35K-lD-aso"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="spe-Xc-muk" secondAttribute="trailing" id="4kl-wc-fec"/>
+                            <constraint firstItem="spe-Xc-muk" firstAttribute="top" secondItem="DTx-Qd-Wso" secondAttribute="bottom" constant="24" id="PQx-dY-L84"/>
+                            <constraint firstItem="spe-Xc-muk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tbl-f9-bu1"/>
+                            <constraint firstItem="DTx-Qd-Wso" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="bzG-Et-RGx"/>
+                            <constraint firstItem="DTx-Qd-Wso" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="jf5-07-bvT"/>
+                            <constraint firstItem="jB2-fo-Geh" firstAttribute="top" secondItem="spe-Xc-muk" secondAttribute="bottom" constant="32" id="wJs-zd-DOn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jB2-fo-Geh" secondAttribute="trailing" constant="16" id="xpP-ZQ-X5g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jB2-fo-Geh" secondAttribute="bottom" constant="24" id="zrt-uv-uKb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceSlider" destination="jB2-fo-Geh" id="q0e-44-ci4"/>
+                        <outlet property="searchBar" destination="DTx-Qd-Wso" id="7BE-9g-8dE"/>
+                        <outlet property="tableView" destination="spe-Xc-muk" id="Pub-b3-863"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

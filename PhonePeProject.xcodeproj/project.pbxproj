@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		B5DE2FD02B12067A00BF8137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FCF2B12067A00BF8137 /* AppDelegate.swift */; };
 		B5DE2FD22B12067A00BF8137 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FD12B12067A00BF8137 /* SceneDelegate.swift */; };
-		B5DE2FD42B12067A00BF8137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FD32B12067A00BF8137 /* ViewController.swift */; };
+		B5DE2FD42B12067A00BF8137 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FD32B12067A00BF8137 /* VenuesViewController.swift */; };
 		B5DE2FD72B12067A00BF8137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DE2FD52B12067A00BF8137 /* Main.storyboard */; };
 		B5DE2FD92B12067C00BF8137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DE2FD82B12067C00BF8137 /* Assets.xcassets */; };
 		B5DE2FDC2B12067C00BF8137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DE2FDA2B12067C00BF8137 /* LaunchScreen.storyboard */; };
+		B5DE2FE42B1206A100BF8137 /* VenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FE32B1206A100BF8137 /* VenueModel.swift */; };
+		B5DE2FE62B12091400BF8137 /* VenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DE2FE52B12091400BF8137 /* VenueTableViewCell.xib */; };
+		B5DE2FE82B12094900BF8137 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */; };
+		B5DE2FEA2B120C2600BF8137 /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FE92B120C2600BF8137 /* VenuesViewModel.swift */; };
+		B5DE2FEC2B122B7A00BF8137 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5DE2FCC2B12067A00BF8137 /* PhonePeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhonePeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DE2FCF2B12067A00BF8137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5DE2FD12B12067A00BF8137 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5DE2FD32B12067A00BF8137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5DE2FD32B12067A00BF8137 /* VenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		B5DE2FD62B12067A00BF8137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5DE2FD82B12067C00BF8137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5DE2FDB2B12067C00BF8137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DE2FDD2B12067C00BF8137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5DE2FE32B1206A100BF8137 /* VenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueModel.swift; sourceTree = "<group>"; };
+		B5DE2FE52B12091400BF8137 /* VenueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueTableViewCell.xib; sourceTree = "<group>"; };
+		B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		B5DE2FE92B120C2600BF8137 /* VenuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
+		B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +68,16 @@
 			children = (
 				B5DE2FCF2B12067A00BF8137 /* AppDelegate.swift */,
 				B5DE2FD12B12067A00BF8137 /* SceneDelegate.swift */,
-				B5DE2FD32B12067A00BF8137 /* ViewController.swift */,
+				B5DE2FD32B12067A00BF8137 /* VenuesViewController.swift */,
+				B5DE2FE92B120C2600BF8137 /* VenuesViewModel.swift */,
 				B5DE2FD52B12067A00BF8137 /* Main.storyboard */,
 				B5DE2FD82B12067C00BF8137 /* Assets.xcassets */,
 				B5DE2FDA2B12067C00BF8137 /* LaunchScreen.storyboard */,
 				B5DE2FDD2B12067C00BF8137 /* Info.plist */,
+				B5DE2FE32B1206A100BF8137 /* VenueModel.swift */,
+				B5DE2FE52B12091400BF8137 /* VenueTableViewCell.xib */,
+				B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */,
+				B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */,
 			);
 			path = PhonePeProject;
 			sourceTree = "<group>";
@@ -126,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DE2FDC2B12067C00BF8137 /* LaunchScreen.storyboard in Resources */,
+				B5DE2FE62B12091400BF8137 /* VenueTableViewCell.xib in Resources */,
 				B5DE2FD92B12067C00BF8137 /* Assets.xcassets in Resources */,
 				B5DE2FD72B12067A00BF8137 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5DE2FD42B12067A00BF8137 /* ViewController.swift in Sources */,
+				B5DE2FD42B12067A00BF8137 /* VenuesViewController.swift in Sources */,
 				B5DE2FD02B12067A00BF8137 /* AppDelegate.swift in Sources */,
 				B5DE2FD22B12067A00BF8137 /* SceneDelegate.swift in Sources */,
+				B5DE2FEC2B122B7A00BF8137 /* LocationManager.swift in Sources */,
+				B5DE2FE82B12094900BF8137 /* VenueTableViewCell.swift in Sources */,
+				B5DE2FEA2B120C2600BF8137 /* VenuesViewModel.swift in Sources */,
+				B5DE2FE42B1206A100BF8137 /* VenueModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,7 @@
 				DEVELOPMENT_TEAM = T4MCU3TK87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhonePeProject/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +339,7 @@
 				DEVELOPMENT_TEAM = T4MCU3TK87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhonePeProject/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

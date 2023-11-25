@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="VenueTableViewCell" id="iN0-l3-epB" customClass="VenueTableViewCell" customModule="PhonePeProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="644" height="273"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-P8-8ML">
+                    <rect key="frame" x="0.0" y="0.0" width="644" height="273"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUR-Us-Hfo">
+                            <rect key="frame" x="16" y="66.666666666666686" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="IuR-PI-pMn"/>
+                                <constraint firstAttribute="width" secondItem="nUR-Us-Hfo" secondAttribute="height" multiplier="180:180" id="cFm-GZ-ybu"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="be4-UB-MbW">
+                            <rect key="frame" x="172" y="108" width="456" height="57"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m6-ef-Bka">
+                                    <rect key="frame" x="0.0" y="0.0" width="456" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UA-qp-2VV">
+                                    <rect key="frame" x="0.0" y="40" width="456" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="be4-UB-MbW" secondAttribute="trailing" constant="16" id="Oit-j4-VKw"/>
+                        <constraint firstItem="nUR-Us-Hfo" firstAttribute="leading" secondItem="gaG-P8-8ML" secondAttribute="leading" constant="16" id="UbA-Kj-B3d"/>
+                        <constraint firstItem="be4-UB-MbW" firstAttribute="centerY" secondItem="gaG-P8-8ML" secondAttribute="centerY" id="jSi-Gf-SJR"/>
+                        <constraint firstItem="nUR-Us-Hfo" firstAttribute="centerY" secondItem="gaG-P8-8ML" secondAttribute="centerY" id="smV-CH-4cw"/>
+                        <constraint firstItem="be4-UB-MbW" firstAttribute="leading" secondItem="nUR-Us-Hfo" secondAttribute="trailing" constant="16" id="xWK-xQ-DMD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gaG-P8-8ML" secondAttribute="trailing" id="DWz-eL-tiY"/>
+                <constraint firstItem="gaG-P8-8ML" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fpw-uP-ILk"/>
+                <constraint firstItem="gaG-P8-8ML" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TzK-ht-zY1"/>
+                <constraint firstAttribute="bottom" secondItem="gaG-P8-8ML" secondAttribute="bottom" id="geV-Cb-d9b"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="img" destination="nUR-Us-Hfo" id="NZ4-lX-kWe"/>
+                <outlet property="venueAddress" destination="0UA-qp-2VV" id="dGu-Kz-p1X"/>
+                <outlet property="venueName" destination="1m6-ef-Bka" id="afF-zj-avp"/>
+            </connections>
+            <point key="canvasLocation" x="270.2290076335878" y="-184.1549295774648"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
