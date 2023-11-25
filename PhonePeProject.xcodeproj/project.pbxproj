@@ -18,6 +18,7 @@
 		B5DE2FE82B12094900BF8137 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */; };
 		B5DE2FEA2B120C2600BF8137 /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FE92B120C2600BF8137 /* VenuesViewModel.swift */; };
 		B5DE2FEC2B122B7A00BF8137 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */; };
+		B5DE2FF02B12451500BF8137 /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2FEF2B12451500BF8137 /* CacheHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
 		B5DE2FE92B120C2600BF8137 /* VenuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
 		B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B5DE2FEF2B12451500BF8137 /* CacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				B5DE2FE52B12091400BF8137 /* VenueTableViewCell.xib */,
 				B5DE2FE72B12094900BF8137 /* VenueTableViewCell.swift */,
 				B5DE2FEB2B122B7A00BF8137 /* LocationManager.swift */,
+				B5DE2FEF2B12451500BF8137 /* CacheHelper.swift */,
 			);
 			path = PhonePeProject;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DE2FF02B12451500BF8137 /* CacheHelper.swift in Sources */,
 				B5DE2FD42B12067A00BF8137 /* VenuesViewController.swift in Sources */,
 				B5DE2FD02B12067A00BF8137 /* AppDelegate.swift in Sources */,
 				B5DE2FD22B12067A00BF8137 /* SceneDelegate.swift in Sources */,

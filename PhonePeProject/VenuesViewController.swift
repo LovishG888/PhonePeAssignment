@@ -28,8 +28,8 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.retrieveCachedVenues()
         setup()
+        viewModel.retrieveCachedVenues()
         // Do any additional setup after loading the view.
     }
     

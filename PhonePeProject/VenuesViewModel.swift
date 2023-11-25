@@ -46,25 +46,12 @@ class VenuesViewModel {
     }
     
     func saveVenuesToCache() {
-        do {
-            let encodedData = try JSONEncoder().encode(places)
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(encodedData, forKey: "venues")
-        } catch {
-            print(error)
-        }
+        UserDefaults.standard.setCodableObject(places, forKey: "venues")
     }
     
     func retrieveCachedVenues() {
-        let userDefaults = UserDefaults.standard
-        if let savedData = userDefaults.object(forKey: "venues") as? Data {
-            do{
-                let savedVenues = try JSONDecoder().decode([Venue].self, from: savedData)
-                self.delegate?.showNearbyPlaces(places: savedVenues, isCachedData: true)
-            } catch {
-                print(error)
-            }
-        }
+        guard let venues = UserDefaults.standard.getCodableObject(dataType: Venue.self, key: "venues") else { return }
+        self.delegate?.showNearbyPlaces(places: venues, isCachedData: true)
     }
     
 }
