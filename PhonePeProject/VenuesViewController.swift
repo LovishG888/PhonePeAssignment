@@ -15,6 +15,9 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
     
     var searchText = "" {
         didSet {
+            // reset the venues list
+            viewModel.places = []
+            viewModel.currentPage = 0
             viewModel.getVenuesList(range: Int(distanceSlider.value), searchQuery: searchText)
         }
     }
@@ -45,6 +48,9 @@ class VenuesViewController: UIViewController, GetPlacesProtocolDelegate {
     
     @IBAction func onDistanceValueChange(_ sender: UISlider) {
         var newDistanceValue = Int(sender.value)
+        // reset the venues list
+        viewModel.places = []
+        viewModel.currentPage = 0
         viewModel.getVenuesList(range: newDistanceValue, searchQuery: searchText)
     }
     
